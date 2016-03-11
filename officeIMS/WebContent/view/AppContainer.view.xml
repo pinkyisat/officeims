@@ -1,0 +1,72 @@
+
+<mvc:View
+	controllerName="sap.ui.avanzarit.solutions.office.ims.controller.AppContainer"
+	xmlns="sap.ui.commons" xmlns:m="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:app="sap.ui.avanzarit.solutions.office.ims.control">
+
+	<l:Splitter>
+		<m:VBox>
+			<f:SimpleForm id="SimpleFormChange354" adjustLabelSpan="false"
+				labelSpanL="12" labelSpanM="12" editable="true" layout="ResponsiveGridLayout"
+				columnsL="1" columnsM="1" class="editableForm nopadding">
+				<f:content>
+					<m:Label design="Bold" text="Visitor's Photo" />
+					<m:Image id="photoplaceholder" densityAware="false" width="200px">
+						<m:layoutData>
+							<l:GridData indent="L5 M5" />
+						</m:layoutData>
+					</m:Image>
+					<m:Label required="true" design="Bold" text="Name" />
+					<m:Input placeholder="First Name">
+						<m:layoutData>
+							<l:GridData span="L4 M4" />
+						</m:layoutData>
+					</m:Input>
+					<m:Input placeholder="Middle Name">
+						<m:layoutData>
+							<l:GridData span="L4 M4" />
+						</m:layoutData>
+					</m:Input>
+					<m:Input placeholder="Last Name">
+						<m:layoutData>
+							<l:GridData span="L4 M4" />
+						</m:layoutData>
+					</m:Input>
+					<m:Label required="true" design="Bold" text="Phone Number" />
+					<m:Input />
+					<m:Label required="true" design="Bold" text="Email" />
+					<m:Input />
+					<m:Label required="true" design="Bold" text="Address" />
+					<m:TextArea value="" rows="5" />
+					<m:Label required="true" design="Bold" text="Organization" />
+					<m:Input />
+					<m:Label required="true" design="Bold" text="Whome to Meet" />
+					<m:Select forceSelection="false" selectedKey="2212-121-828"
+						items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}">
+						<core:Item key="{ProductId}" text="{Name}" />
+
+					</m:Select>
+			
+				</f:content>
+			</f:SimpleForm>
+
+			<m:layoutData>
+				<l:SplitterLayoutData size="auto" />
+			</m:layoutData>
+		</m:VBox>
+
+		<m:VBox>
+			<app:PhotoCapture id="photocapture" photoPlaceholderId="photoplaceholder" bind="onBind" videoWidth="350px"
+				videoHeight="350px" />
+
+			<m:layoutData>
+				<l:SplitterLayoutData size="40%" />
+			</m:layoutData>
+		</m:VBox>
+	</l:Splitter>
+
+</mvc:View>
