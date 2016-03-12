@@ -41,6 +41,21 @@
 					<m:TextArea value="" rows="5" />
 					<m:Label required="true" design="Bold" text="Organization" />
 					<m:Input />
+					
+					
+					
+					<m:Label required="true" design="Bold" text="Phone Number" />
+					<m:Input />
+					<m:Label required="true" design="Bold" text="Email" />
+					<m:Input />
+					<m:Label required="true" design="Bold" text="Address" />
+					<m:TextArea value="" rows="5" />
+					<m:Label required="true" design="Bold" text="Organization" />
+					<m:Input />
+					
+					
+					
+					
 					<m:Label required="true" design="Bold" text="Whome to Meet" />
 					<m:Select forceSelection="false" selectedKey="2212-121-828"
 						items="{
@@ -60,7 +75,7 @@
 		</m:VBox>
 
 		<m:VBox>
-			<app:PhotoCapture id="photocapture" photoPlaceholderId="photoplaceholder" bind="onBind" videoWidth="350px"
+			<app:PhotoCapture id="photocapture" capture="onCapture" videoWidth="350px"
 				videoHeight="350px" />
 
 			<m:layoutData>

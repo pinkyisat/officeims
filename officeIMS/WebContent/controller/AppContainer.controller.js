@@ -6,15 +6,15 @@ sap.ui.define([
    return Controller.extend("sap.ui.avanzarit.solutions.office.ims.controller.AppContainer", {
 	
 	   onInit: function(){
-				 			 
+				 
 	   },
 	   
-	   onBind:function(oEvent){
-		   var photoCaptureControl=oEvent.getSource();
-		   photoCaptureControl.setPhotoPlaceholder(this.getView().byId(oEvent.getParameter("photoplaceholder")));
-	   }
-   
-   
+		   
+	   onCapture: function(oEvent){
+	       var photoSrc=oEvent.getParameter("photoSrc");
+		   this.getView().byId("photoplaceholder").setSrc(photoSrc);
+		   
+	   }   
 	      
    });
 });
